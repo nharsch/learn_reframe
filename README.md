@@ -1,5 +1,30 @@
 ![alt learn-re-frame-logo](https://res.cloudinary.com/schae/image/upload/f_auto,q_80,r_16/v1549283297/cheffy/1200x680.png)
 
+# Dev Env Startup
+
+From (shadow-cljs docs)[https://shadow-cljs.github.io/docs/UsersGuide.html#editor_integration]
+
+14.6.3. Connecting Fireplace.vim to REPL Server
+Open a ClojureScript source file in Vim/Neovim and execute the following command to connect Fireplace.vim to the REPL server (note the port for the REPL server, 3333, specified in shadow-cljs.edn):
+
+```
+:Connect 3333
+=>
+Connected to nrepl://localhost:3333/
+Scope connection to: ~/code/clojurescript/acme-app (ENTER)
+```
+
+This creates a Clojure (instead of ClojureScript) REPL session. Execute the following command to add ClojureScript support to the session (note the Shadow-CLJS build ID, frontend, specified in shadow-cljs.edn):
+
+```
+:CljEval (shadow/repl :frontend)
+
+=>
+To quit, type: :cljs/quit
+[:selected :frontend]
+Press ENTER or type command to continue
+```
+
 # [learnreframe.com](https://www.learnreframe.com)
 
 Learn re-frame a pattern for writing SPAs (Single-Page Applications) in ClojureScript, using Reagent. Build Cheffy; AirBnB for chefs. It includes CRUD operations, idiomatic code and advanced patterns. Step-by-step, concept-by-concept we'll learn how to work with app-db, effects, subscriptions and much more. Upon completion of the course you will be a hotshot when it comes to re-frame.
