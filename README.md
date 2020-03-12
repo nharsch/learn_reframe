@@ -17,7 +17,7 @@ Scope connection to: ~/code/clojurescript/acme-app (ENTER)
 This creates a Clojure (instead of ClojureScript) REPL session. Execute the following command to add ClojureScript support to the session (note the Shadow-CLJS build ID, frontend, specified in shadow-cljs.edn):
 
 ```
-:CljEval (shadow/repl :frontend)
+:CljEval (shadow/repl :app)
 
 =>
 To quit, type: :cljs/quit
