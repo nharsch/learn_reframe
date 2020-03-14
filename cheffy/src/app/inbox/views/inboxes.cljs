@@ -5,5 +5,5 @@
 
 (defn inboxes
   []
-  [page-nav {:center "Invoxes"}] 
+  [page-nav {:center "Inboxes"}]
   )

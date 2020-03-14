@@ -31,7 +31,7 @@
     :recipes [recipes]
     :sign-up [sign-up]
     :log-in [log-in]
-    [recipes]
+    [log-in]
     ))
 
 
@@ -51,10 +51,13 @@
 
 (defn ^:dev/after-load start
   []
-  (rf/dispatch-sync [:initialize-db])
+  (js/console.log "start")
   (r/render [app]
     (.getElementById js/document "app")))
 
 (defn ^:export init
   []
-  (start))
+  (js/console.log "init")
+  (rf/dispatch-sync [:initialize-db])
+  (start)
+  )

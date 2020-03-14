@@ -10,11 +10,12 @@
 
 (defn get-auth
   []
+  true
   (boolean (parse-auth-param  (-> js/window .-location .-search))))
 
 (defn nav
   []
-  (let [user (get-auth)]
+  (let [user false] ;; TODO: state
     (if user
       [authenticated]
       [public])))
