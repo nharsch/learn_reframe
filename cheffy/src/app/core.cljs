@@ -20,6 +20,8 @@
             [app.theme :refer [cheffy-theme]]
             ["@smooth-ui/core-sc" :refer [Grid Row Col Normalize ThemeProvider Button]]))
 
+
+;; page switcher
 (defn pages
   [page-name]
   (case page-name
@@ -32,7 +34,6 @@
     [recipes]
     ))
 
-(pages :inboxes)
 
 (defn app
   []
