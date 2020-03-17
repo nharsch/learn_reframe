@@ -1,5 +1,6 @@
 (ns app.nav.views.nav
   (:require [app.nav.views.authenticated :refer [authenticated]]
+            [re-frame.core :as rf]
             [app.nav.views.public :refer [public]]))
 
 (defn parse-auth-param
@@ -8,14 +9,10 @@
     (nth res 1)))
 
 
-(defn get-auth
-  []
-  true
-  (boolean (parse-auth-param  (-> js/window .-location .-search))))
 
 (defn nav
   []
-  (let [user false] ;; TODO: state
-    (if user
+  (let [logged-in? @(rf/subscribe [:logged-in?])] ;; TODO: state
+    (if logged-in?
       [authenticated]
       [public])))
