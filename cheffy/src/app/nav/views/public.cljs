@@ -24,9 +24,7 @@
                     :name "Log in"
                     :href "#log-in"
                     :dispatch #(rf/dispatch [:set-active-nav :log-in])}]]
-    [:> Box {:display "flex"
-             :justify-content "flex-end"
-             :py 1}
+    [:<> 
      (for [{:keys [id name href dispatch]} nav-items]
        [nav-item {:key id
                   :id id

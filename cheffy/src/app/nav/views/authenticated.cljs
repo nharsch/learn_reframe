@@ -30,9 +30,7 @@
                     :href "#profile"
                     :dispatch #(rf/dispatch [:set-active-nav :profile])
                     }]]
-    [:> Box {:display "flex"
-             :justify-content "flex-end"
-             :py 1}
+    [:<>
       (for [{:keys [id name href dispatch]} nav-items]
         [nav-item {:id id
                    :key id

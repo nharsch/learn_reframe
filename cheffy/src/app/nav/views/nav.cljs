@@ -1,6 +1,7 @@
 (ns app.nav.views.nav
   (:require [app.nav.views.authenticated :refer [authenticated]]
             [re-frame.core :as rf]
+            ["@smooth-ui/core-sc" :refer [Box]] 
             [app.nav.views.public :refer [public]]))
 
 (defn parse-auth-param
@@ -13,6 +14,9 @@
 (defn nav
   []
   (let [logged-in? @(rf/subscribe [:logged-in?])] ;; TODO: state
-    (if logged-in?
-      [authenticated]
-      [public])))
+    [:> Box {:display "flex"
+             :justify-content "flex-start"
+             :py 1}
+      (if logged-in?
+          [authenticated]
+          [public])]))
