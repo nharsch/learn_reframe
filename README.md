@@ -25,6 +25,44 @@ To quit, type: :cljs/quit
 Press ENTER or type command to continue
 ```
 
+# NJH Notes
+
+## (Reagent)[https://reagent-project.github.io/]: CLJS interface to React
+
+declarative style
+```
+(defn simple-component []
+  [:div
+   [:p "I am a component!"]
+   [:p.someclass
+    "I have " [:strong "bold"]
+    [:span {:style {:color "red"}} " and red "] "text."]])
+```
+
+`:>` == `reagent.core/adapt-react-class`
+
+```
+(defn react-component []
+    [:> ReactClass {...props}])
+```
+
+Project uses smooth ui JS/React lib
+
+## (Re-frame)[https://github.com/day8/re-frame] for state management
+
+Components can subscribe to slices of app state
+
+Event Dispatch -> Event Handling -> Effect Handling -> Query -> View -> Dom
+
+Event Handlers return new state
+
+Effect Handlers update state and trigger another event
+
+## Shadow-Cljs
+
+Hot code reloading, repl goodness, nifty toolbar.
+
+
 # [learnreframe.com](https://www.learnreframe.com)
 
 Learn re-frame a pattern for writing SPAs (Single-Page Applications) in ClojureScript, using Reagent. Build Cheffy; AirBnB for chefs. It includes CRUD operations, idiomatic code and advanced patterns. Step-by-step, concept-by-concept we'll learn how to work with app-db, effects, subscriptions and much more. Upon completion of the course you will be a hotshot when it comes to re-frame.

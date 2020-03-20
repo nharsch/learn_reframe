@@ -1,7 +1,7 @@
 (ns app.nav.views.authenticated
   (:require [app.nav.views.nav-item :refer [nav-item]]
             ["@smooth-ui/core-sc" :refer [Box]]
-            [re-frame.core :as rf] 
+            [re-frame.core :as rf]
             ))
 
 (defn authenticated

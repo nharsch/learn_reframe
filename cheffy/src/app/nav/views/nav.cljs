@@ -13,7 +13,7 @@
 
 (defn nav
   []
-  (let [logged-in? @(rf/subscribe [:logged-in?])] ;; TODO: state
+  (let [logged-in? @(rf/subscribe [:logged-in?])]
     [:> Box {:display "flex"
              :justify-content "flex-start"
              :py 1}

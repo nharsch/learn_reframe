@@ -251,7 +251,16 @@
                                                           :desc "Serve hot with marmalaids, honey, syrup, peanut butter etc."}}
                                         :cook "jade@mailinator.com"
                                         :price 2900}}
-                     :users {"mike@mailinator.com" {:uid "mike@mailinator.com"
+                     :users {"nharsch" {:uid "nharsch"
+                                                    :profile {:first-name "Nigel"
+                                                              :last-name "Harsch"
+                                                              :img ""
+                                                              :email "nigelharsch@gmail.com"
+                                                              :password "password"}
+                                                    :role :user
+                                                    :saved #{}
+                                                    :inboxes {}}
+                             "mike@mailinator.com" {:uid "mike@mailinator.com"
                                                     :profile {:first-name "Mike"
                                                               :last-name "Jordan"
                                                               :img "https://res.cloudinary.com/schae/image/upload/f_auto,h_400,q_80/v1548196567/cheffy/mike.jpg"
